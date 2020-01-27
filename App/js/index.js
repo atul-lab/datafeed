@@ -45,24 +45,18 @@ xui.Class('App', 'xui.Module',{
                 .setItems([
                     {
                         "id":"a",
-                        "caption":"item 1",
+                        "caption":"Third",
                         "imageClass":"xui-icon-number1"
                     },
                     {
                         "id":"b",
-                        "caption":"item 2",
+                        "caption":"Fourth",
                         "imageClass":"xui-icon-number2"
                     },
                     {
                         "id":"c",
-                        "caption":"item 3",
+                        "caption":"Fifth",
                         "imageClass":"xui-icon-number3"
-                    },
-                    {
-                        "id":"d",
-                        "caption":"item 4",
-                        "imageClass":"xui-icon-number4",
-                        "disabled":true
                     }
                 ])
             );
@@ -80,24 +74,18 @@ xui.Class('App', 'xui.Module',{
                 .setItems([
                     {
                         "id":"a",
-                        "caption":"item 1",
+                        "caption":"Science",
                         "imageClass":"xui-icon-number1"
                     },
                     {
                         "id":"b",
-                        "caption":"item 2",
+                        "caption":"Maths",
                         "imageClass":"xui-icon-number2"
                     },
                     {
                         "id":"c",
-                        "caption":"item 3",
+                        "caption":"Reading",
                         "imageClass":"xui-icon-number3"
-                    },
-                    {
-                        "id":"d",
-                        "caption":"item 4",
-                        "imageClass":"xui-icon-number4",
-                        "disabled":true
                     }
                 ])
             );
@@ -142,6 +130,18 @@ xui.Class('App', 'xui.Module',{
                 .setTop("39.166666666666664em")
                 .setWidth("8.75em")
                 .setCaption("Submit")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput136")
+                .setDirtyMark(false)
+                .setLeft("40.833333333333336em")
+                .setTop("34.166666666666664em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("Getter")
+                .setType("getter")
             );
             
             return children;
