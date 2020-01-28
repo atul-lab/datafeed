@@ -104,25 +104,6 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("xui.UI.Input")
-                .setHost(host,"xui_ui_input7")
-                .setDirtyMark(false)
-                .setLeft("2.5em")
-                .setTop("20em")
-                .setWidth("45.5em")
-                .setLabelSize("8em")
-                .setLabelCaption("Answer")
-            );
-            
-            append(
-                xui.create("xui.UI.HTMLButton")
-                .setHost(host,"xui_ui_htmlbutton3")
-                .setLeft("48.333333333333336em")
-                .setTop("20em")
-                .setCaption("Add Next Option")
-            );
-            
-            append(
                 xui.create("xui.UI.Button")
                 .setHost(host,"xui_ui_button6")
                 .setDirtyMark(false)
@@ -133,15 +114,58 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput136")
+                xui.create("xui.UI.Block")
+                .setHost(host,"xui_ui_block34")
+                .setLeft("6.666666666666667em")
+                .setTop("21.666666666666668em")
+                .setWidth("52.5em")
+                .setHeight("3.3333333333333335em")
+            );
+            
+            host.xui_ui_block34.append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton3")
+                .setLeft("43.333333333333336em")
+                .setTop("0.8333333333333334em")
+                .setCaption("Add Next Option")
+                .onClick({
+                    "newbies":{
+                        "N3rwkkzbk":"xui.UI.Input",
+                        "Nb6zr5s46":"xui.UI.HTMLButton"
+                    },
+                    "actions":[
+                        {
+                            "desc":"Action 1",
+                            "type":"control",
+                            "target":"xui_ui_htmlbutton3",
+                            "args":[
+                                undefined,
+                                undefined,
+                                "{page.xui_ui_block34.show()}"
+                            ],
+                            "method":"show",
+                            "event":1,
+                            "conditions":[
+                                {
+                                    "left":"{page.xui_ui_input7}",
+                                    "symbol":"non-empty",
+                                    "right":""
+                                }
+                            ]
+                        }
+                    ]
+                })
+            );
+            
+            append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"xui_ui_input7")
                 .setDirtyMark(false)
-                .setLeft("40.833333333333336em")
-                .setTop("34.166666666666664em")
-                .setWidth("18em")
+                .setLeft("3.3333333333333335em")
+                .setTop("22.5em")
+                .setWidth("45.5em")
                 .setLabelSize("8em")
-                .setLabelCaption("Getter")
-                .setType("getter")
+                .setLabelCaption("Answer")
             );
             
             return children;
